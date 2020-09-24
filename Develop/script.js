@@ -38,7 +38,14 @@ function generatePassword() {
      confirmSpecialCharacter = confirm("Click OK if you would like to include special characters.");
      confirmUppercase = confirm("Click OK if you would like to include upper case characters.");
      confirmLowercase = confirm("Click OK if you would like to include lower case characters.");
+     // Loop if user selects no characters
+     while(confirmNumericCharacter === false && confirmSpecialCharacter === false && confirmUppercase === false && confirmLowercase === false){
+       alert("You must choose at least one character type.");
+       confirmNumericCharacter = confirm("Click OK if you would like to include numeric characters.");
+     confirmSpecialCharacter = confirm("Click OK if you would like to include special characters.");
+     confirmUppercase = confirm("Click OK if you would like to include upper case characters.");
+     confirmLowercase = confirm("Click OK if you would like to include lower case characters.");
+     }
 }
-
 
 
