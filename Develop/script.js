@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var number = [Math.floor(Math.random() * 10) + 1];
+// Add var number 0-9
+var number1 = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "+", "/", "<", ">", "~", "?", "."];
 var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -44,19 +45,19 @@ function generatePassword() {
 
      // If user selects all 4 character types
      if (confirmNumericCharacter && confirmSpecialCharacter && confirmUppercase && confirmLowercase) {
-      groupArray = number.concat(specialChar, upperCase, lowerCase);
+      groupArray = number1.concat(specialChar, upperCase, lowerCase);
      }
      // If user selects 3 character types
      else if (confirmNumericCharacter && confirmSpecialCharacter && confirmUppercase) {
-       groupArray = number.concat(specialChar, upperCase);
+       groupArray = number1.concat(specialChar, upperCase);
      }
      
      else if (confirmNumericCharacter && confirmSpecialCharacter && confirmLowercase) {
-      groupArray = number.concat(specialChar, lowerCase);
+      groupArray = number1.concat(specialChar, lowerCase);
      }
 
      else if (confirmNumericCharacter && confirmUppercase && confirmLowercase) {
-      groupArray = number.concat(upperCase, lowerCase);
+      groupArray = number1.concat(upperCase, lowerCase);
      }
 
      else if (confirmSpecialCharacter && confirmUppercase && confirmLowercase) {
@@ -64,15 +65,15 @@ function generatePassword() {
      }
      // If user selects 2 character types
      else if (confirmNumericCharacter && confirmSpecialCharacter) {
-       groupArray = number.concat(specialChar);
+       groupArray = number1.concat(specialChar);
      }
 
      else if (confirmNumericCharacter && confirmUppercase) {
-      groupArray = number.concat(upperCase);
+      groupArray = number1.concat(upperCase);
      }
 
      else if (confirmNumericCharacter && confirmLowercase) {
-      groupArray = number.concat(lowerCase);
+      groupArray = number1.concat(lowerCase);
      }
 
      else if (confirmLowercase && confirmSpecialCharacter) {
@@ -88,7 +89,7 @@ function generatePassword() {
     }
     // If user selects 1 character types
     else if (confirmNumericCharacter) {
-      groupArray = number;
+      groupArray = number1;
     }
     else if (confirmSpecialCharacter) {
       groupArray = specialChar;
